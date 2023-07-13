@@ -7,6 +7,9 @@
     "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.4.9",
     "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
     "next": "latest",
