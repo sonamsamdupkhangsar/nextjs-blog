@@ -28,6 +28,13 @@ export default function Post({ postData }) {
     return (
       <Layout>
         <Head>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `mermaid.initialize({startOnLoad: true});`,
+            }}
+            />
           <title>{postData.title}</title>
         </Head>
         <article>
@@ -35,7 +42,7 @@ export default function Post({ postData }) {
           <div className={utilStyles.lightText}>
             <Date dateString={postData.date} />
           </div>
-          <div dangerouslySetInnerHTML={{ __html: `mermaid.initialize({startOnLoad: true});`, postData.contentHtml }} />
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
       </Layout>
     );
