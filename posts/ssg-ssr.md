@@ -20,23 +20,6 @@ In that case, you can use **Server-Side Rendering**. It will be slower, but the 
 
 
  <div class="mermaid">
-flowchart TD
-    A[user request] -.-> B(Load balancer)
-    B -.-> C(DNS Server)
-    C -.-> D[/email-rest-service.sonam.cloud/]
-
-    subgraph k8[Kubernetes Cluster]
-    subgraph ingress[Ingress]
-    F(Nginx Controller)
-    end
-
-    subgraph app[email-rest-service]
-    G(Kubernetes Service)
-    G -- uses authId header for user context --> H(email-rest-service pod)
-    H -- validate jwt token using jwt-validator --> H
-    end    
-    
-    end
-    F -. 3 calls-service .-> G
-    B -.-> k8
+ graph LR
+A-->B
 </div>    
