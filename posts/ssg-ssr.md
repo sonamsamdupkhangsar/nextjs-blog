@@ -19,7 +19,7 @@ On the other hand, Static Generation is **not** a good idea if you cannot pre-re
 In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
 
 
-```mermaid!
+ <div class="mermaid">
 flowchart TD
     A[user request] -.-> B(Load balancer)
     B -.-> C(DNS Server)
@@ -39,5 +39,4 @@ flowchart TD
     end
     F -. 3 calls-service .-> G
     B -.-> k8
-    
-```
+</div>    

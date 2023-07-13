@@ -35,7 +35,7 @@ export default function Post({ postData }) {
           <div className={utilStyles.lightText}>
             <Date dateString={postData.date} />
           </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div dangerouslySetInnerHTML={{ __html: `mermaid.initialize({startOnLoad: true});`, postData.contentHtml }} />
         </article>
       </Layout>
     );
