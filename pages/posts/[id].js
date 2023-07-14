@@ -2,7 +2,7 @@ import Date from '../../components/date';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
-import Script from 'next/script'
+import Script from 'next/script';
 
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
@@ -29,13 +29,13 @@ export default function Post({ postData }) {
     return (
       <Layout>
         <Head>
-        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-        <script
+        <Script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" />    
+        <Script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
               __html: `mermaid.initialize({startOnLoad: true});`,
             }}
-            />
+          />
           <title>{postData.title}</title>
         </Head>
         <article>
