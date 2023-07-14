@@ -70,11 +70,7 @@ flowchart TD
     
 ```
 
-          ```mermaid!
-            flowchart TD
-            graph LR
-                A--B
-            </div>
+       
         </article>
       </Layout>
     );
