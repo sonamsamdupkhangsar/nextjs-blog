@@ -28,13 +28,16 @@ export default function Post({ postData }) {
     return (
       <Layout>
         <Head>
-        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-        <script
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: `mermaid.initialize({startOnLoad: true});`,
-            }}
-            />
+        <Script
+        type="module"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+         import mermaid from "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs";
+         mermaid.initialize({startOnLoad: true});
+         mermaid.contentLoaded();`,
+        }}
+      />
           <title>{postData.title}</title>
         </Head>
         <article>
