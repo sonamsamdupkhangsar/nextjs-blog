@@ -49,7 +49,7 @@ export default function Post({ postData }) {
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           <div class="mermaid">
             graph LR
-                A-->B
+                A--{'>'}B
             </div>
         </article>
       </Layout>
