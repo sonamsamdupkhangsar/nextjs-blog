@@ -66,7 +66,10 @@ flowchart TD
     B -.-{'>'} k8
     
 ```
-
+<div class="mermaid">
+graph LR
+A--{'>'}B
+  </div>
        
         </article>
       </Layout>
