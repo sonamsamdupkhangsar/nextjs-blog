@@ -29,16 +29,7 @@ export default function Post({ postData }) {
     return (
       <Layout>
         <Head>
-        <Script
-        type="module"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-         import mermaid from "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs";
-         mermaid.initialize({startOnLoad: true});
-         mermaid.contentLoaded();`,
-        }}
-      />
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
           <title>{postData.title}</title>
         </Head>
         <article>
