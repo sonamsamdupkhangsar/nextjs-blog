@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import Script from 'next/script';
 
 export default function Post({
   postData
@@ -18,7 +19,16 @@ export default function Post({
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" 
+            />
+               <script 
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `mermaid.initialize({startOnLoad: true});`,
+            }}
+          />
       </Head>
+    
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>

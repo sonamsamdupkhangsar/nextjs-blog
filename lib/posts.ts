@@ -59,8 +59,13 @@ console.log("matterResult: ", matterResult);
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content)
-  const contentHtml = processedContent.toString()
+  var contentHtml = processedContent.toString()
+  
 
+  contentHtml = contentHtml.replace(new RegExp('```mermaid!', 'g'), '<div id="sonam" class="mermaid">')
+  contentHtml = contentHtml.replace(new RegExp('```', 'g'), '</div>')
+  console.log('html: ', contentHtml);
+     
   // Combine the data with the id and contentHtml
   return {
     id,
