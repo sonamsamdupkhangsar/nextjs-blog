@@ -62,8 +62,8 @@ console.log("matterResult: ", matterResult);
   var contentHtml = processedContent.toString()
   
 
-  contentHtml = contentHtml.replace(new RegExp('```mermaid!', 'g'), '<div id="sonam" class="mermaid">')
-  contentHtml = contentHtml.replace(new RegExp('```', 'g'), '</div>')
+  contentHtml = contentHtml.replace(new RegExp('```mermaid!', 'g'), '<pre class="mermaid">')
+  contentHtml = contentHtml.replace(new RegExp('```', 'g'), '</pre>')
   console.log('html: ', contentHtml);
      
   // Combine the data with the id and contentHtml
